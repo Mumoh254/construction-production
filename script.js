@@ -1,13 +1,13 @@
 const playButton = document.getElementById('play-video-btn');
 const video = document.getElementById('showroom-video');
 
-// Ensure the video can be played inline and muted to avoid restrictions
-video.muted = true; // Some browsers may require the video to be muted
+
+video.muted = true; 
 video.playsinline = true;
 
-// Add click event listener to the button
+
 playButton.addEventListener('click', function() {
-    // Try playing the video
+
     video.play().catch(function(error) {
         console.log("Video play failed:", error);
     });
@@ -39,10 +39,10 @@ function countUp(element) {
 
 function countUp(element) {
     const target = +element.getAttribute('data-target');
-    const suffix = element.getAttribute('data-suffix') || ''; // Get the suffix or default to empty string
+    const suffix = element.getAttribute('data-suffix') || ''; 
     const speed = 200;
     const updateCount = () => {
-        const currentCount = +element.innerText.replace(suffix, ''); // Remove suffix during counting
+        const currentCount = +element.innerText.replace(suffix, ''); 
         const increment = target / speed;
         
         if (currentCount < target) {
